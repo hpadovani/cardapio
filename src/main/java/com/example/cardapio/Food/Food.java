@@ -1,0 +1,55 @@
+package com.example.cardapio.Food;
+
+import jakarta.persistence.*;
+
+@Table(name = "foods")
+@Entity(name = "foods")
+public class Food {
+	@Id 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	private Long id;
+	
+	private String title;
+	
+	private Integer price;
+	
+	private String image;
+	
+	// Construtor padrão (obrigatório para o JPA)
+    public Food() {}
+
+    // Getters e Setters para todos os campos
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+	
+}
