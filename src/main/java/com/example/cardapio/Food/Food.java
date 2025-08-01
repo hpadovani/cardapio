@@ -29,7 +29,7 @@ public class Food {
     public Food() {}
 
     // Getters e Setters para todos os campos
-    public Long getId() {
+   public Long getId() {
         return id;
     }
 
