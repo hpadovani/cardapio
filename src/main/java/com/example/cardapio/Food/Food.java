@@ -16,7 +16,7 @@ public class Food {
 	
 	private String image;
 	
-	// Construtor padrão (obrigatório para o JPA)
+	// Construtor padrão (obrigatório para o JPA!)
     public Food() {}
 
     // Getters e Setters para todos os campos
