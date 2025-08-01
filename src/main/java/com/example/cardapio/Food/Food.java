@@ -1,9 +1,18 @@
 package com.example.cardapio.Food;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Table(name = "foods")
 @Entity(name = "foods")
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = "id")
+
 public class Food {
 	@Id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,8 +24,8 @@ public class Food {
 	private Integer price;
 	
 	private String image;
-	
-	// Construtor padrão (obrigatório para o JPA!)
+
+	// Construtor padrão (obrigatório para o JPA)
     public Food() {}
 
     // Getters e Setters para todos os campos
@@ -51,5 +60,6 @@ public class Food {
     public void setImage(String image) {
         this.image = image;
     }
+	
 	
 }
