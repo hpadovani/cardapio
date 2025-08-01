@@ -61,5 +61,11 @@ public class Food {
         this.image = image;
     }
 	
+    
+    public Food (FoodRequestDTO data) {
+        this.image = data.image();
+        this.price = data.price();
+        this.title = data.title();
+    }
 	
 }
